@@ -1,0 +1,109 @@
+{
+  "schema": 1,
+  "kind": "kapitsa-bench",
+  "mode": "full",
+  "time_utc": "2026-10-22T14:10:39Z",
+  "kapitsa": {
+    "version": "0.2.2",
+    "commit": "b50f1fc"
+  },
+  "mac": {
+    "identifier": "Macmini9,1",
+    "name": "Mac mini (M1, 2020)",
+    "year": 2020,
+    "chip": "Apple M1",
+    "cpu_cores": 8,
+    "gpu_cores": 8,
+    "memory_gb": 16,
+    "macos": "26.6.2",
+    "macos_build": "25G83"
+  },
+  "model": {
+    "name": "qwen3.5-4b",
+    "title": "Qwen3.5-4B",
+    "variant": "4bit",
+    "precision": "4-bit",
+    "catalog": true,
+    "revision": "c43ee1d",
+    "decoding": "unknown",
+    "decoding_detail": "KFlash speculative decoding (DFlash2 lattice, tree verify)",
+    "drafter": null
+  },
+  "protocol": {
+    "corpus_sha256": "1a9bb103b3f6d39ee5b9f5bf7207e304c5ce92788c273685f597508c7d2bde28",
+    "decode_tokens": 512,
+    "decode_runs": 5,
+    "greedy_runs": 5,
+    "sizes": [
+      4000,
+      16000
+    ]
+  },
+  "results": {
+    "decode": {
+      "median_tps": 48.86,
+      "runs_tps": [
+        56.4,
+        45.06,
+        49.78,
+        46.5,
+        48.86
+      ]
+    },
+    "decode_greedy": {
+      "median_tps": 52.77,
+      "runs_tps": [
+        53.45,
+        52.77,
+        52.83,
+        52.05,
+        52.73
+      ]
+    },
+    "prefill": [
+      {
+        "size": 4000,
+        "prompt_tokens": 4131,
+        "ttft_s": 17.9762,
+        "tps": 229.8,
+        "followup_s": [
+          0.1769,
+          0.2277,
+          0.1972
+        ],
+        "followup_median_s": 0.1972
+      },
+      {
+        "size": 16000,
+        "prompt_tokens": 16288,
+        "ttft_s": 79.08,
+        "tps": 206.0,
+        "followup_s": [
+          0.2239,
+          0.2894,
+          0.2266
+        ],
+        "followup_median_s": 0.2266
+      }
+    ],
+    "tool_calls": "pass",
+    "peak_memory_gb": 4.42
+  },
+  "conditions": {
+    "power_source": "ac",
+    "power_mode": null,
+    "low_power_mode": false,
+    "thermal_state": "nominal",
+    "swapouts": 3808,
+    "gpu_quiet_wait_s": 18.1,
+    "gpu_other_mean_pct": 0.14,
+    "gpu_other_max_pct": 11.01,
+    "gpu_ambient_mean_pct": 0.0,
+    "gpu_users": [],
+    "contention": []
+  },
+  "flags": [
+    "prefill_16000: 3808 pages swapped out during the phase"
+  ],
+  "invalid": []
+}
